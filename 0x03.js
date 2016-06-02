@@ -29,6 +29,11 @@ async.series([
 					console.log("starting series - 1");
 					randomDelay(function() {console.log("completed series - 1"); done();});
 				},
+				// notice that each of these functions has a `done` parameter. This is a
+				// function you would call to let async know this task is complete. You must
+				// ensure this done function is called exactly once. If it is not called,
+				// the sequence cannot continue. If it is called twice, it will throw an
+				// error.
 				function(done) {
 					console.log("starting series - 2");
 					randomDelay(function() {console.log("completed series - 2"); done();});
@@ -38,6 +43,9 @@ async.series([
 					randomDelay(function() {console.log("completed series - 3"); done();});
 				},
 			],
+			// this is the final callback that gets called when the sequence is complete.
+			// This is callback is always called, even if one of the functions above results
+			// in an error (shown later).
 			function seriesComplete() {
 				console.log("series complete");
 				console.log();
@@ -74,6 +82,9 @@ async.series([
 					randomDelay(function() {console.log("completed parallel - 3"); done();});
 				},
 			],
+			// this is the final callback that gets called when all the tasks above complete.
+			// This is callback is always called, even if one of the functions above results
+			// in an error (shown later).
 			function parallelComplete() {
 				console.log("parallel complete");
 				console.log();
