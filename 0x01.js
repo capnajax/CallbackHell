@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 /*
-Lesson 0x01: order of operations
+Lesson 0x01: sequence of operations
 
 JavaScript maintains a queue of asyncronous tasks. One common 
 gotcha is that asynchronous tasks don't get called in the order
