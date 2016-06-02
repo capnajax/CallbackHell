@@ -1,8 +1,9 @@
 {
-  "description": "",
-  "repository": "",
+  "description": "A few notes on handling callbacks",
+  "repository": "https://github.com/capnajax/CallbackHell",
   "license": "",
   "dependencies": {
+    "async": "^2.0.0-rc.5",
     "lodash": "^4.13.1"
   }
 }
