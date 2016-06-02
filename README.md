@@ -37,3 +37,9 @@ When handling a lot of callbacks, it helps to use a framework
 like Async to manage them. This lesson provides a demo on how
 to use Async to run operations in series and in parallel.
 
+### Lesson 0x04: Unwinding callback hell into async
+
+When there is a long chain og callbacks, it is very difficult
+to trace the sequence of operations, see the entire outer
+functions, and find the scope of variables. This shows how to
+unwind a deeply nested function into an async series
