@@ -9,7 +9,8 @@ git clone https://github.com/capnajax/CallbackHell.git
 cd CallbackHell
 npm install
 ```
-To run the lessons. View their source code to see what the lessons are doing.
+To run the lessons. View their source code to see what the 
+lessons are doing.
 ```
 node <lesson>.js
 ```
@@ -42,4 +43,10 @@ to use Async to run operations in series and in parallel.
 When there is a long chain of callbacks, it is difficult
 to trace the sequence of operations, see the entire outer
 functions, and find the scope of variables. This shows how to
-unwind a deeply nested function into an async series
+unwind a deeply nested function into an async series.
+
+### [Lesson 0x05](0x05.js): Another way: using promises
+
+There are many other ways to handle callback hell as well. 
+Here is another example using Bluebird Promises. You'll see 
+how differently Bluebird organizes its promises.
